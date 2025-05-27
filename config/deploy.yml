@@ -1,8 +1,8 @@
 # Name of your application. Used to uniquely configure containers.
-service: dnd_map_browser_server
+service: dnd_maps_browser_server
 
 # Name of the container image.
-image: your-user/dnd_map_browser_server
+image: your-user/dnd_maps_browser_server
 
 # Deploy to these servers.
 servers:
@@ -47,7 +47,7 @@ env:
     # WEB_CONCURRENCY: 2
 
     # Match this to any external database server to configure Active Record correctly
-    # Use dnd_map_browser_server-db for a db accessory server on same machine via local kamal docker network.
+    # Use dnd_maps_browser_server-db for a db accessory server on same machine via local kamal docker network.
     # DB_HOST: 192.168.0.2
 
     # Log everything from Rails
@@ -65,7 +65,7 @@ aliases:
 # Use a persistent storage volume for sqlite database files and local Active Storage files.
 # Recommended to change this to a mounted volume path that is backed up off server.
 volumes:
-  - "dnd_map_browser_server_storage:/rails/storage"
+  - "dnd_maps_browser_server_storage:/rails/storage"
 
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
@@ -82,7 +82,7 @@ builder:
   #
   # # Pass arguments and secrets to the Docker build process
   # args:
-  #   RUBY_VERSION: ruby-3.2.1
+  #   RUBY_VERSION: ruby-3.4.4
   # secrets:
   #   - GITHUB_TOKEN
   #   - RAILS_MASTER_KEY
